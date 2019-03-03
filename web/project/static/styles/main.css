@@ -1,0 +1,67 @@
+#something {
+  position: static;
+  background-color: white;
+  height: 50%;
+  width: 66%;
+  margin: auto;
+}
+
+html, body {
+  height: 150%;
+  padding-top: 5%;
+    margin: 0;
+
+}
+
+#header {
+  background-image: url('/static/images/blue_poly.png');
+  position: fixed;
+  background-color: white;
+  z-index: 10;
+  max-height: 140px;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  /* for safari */
+  position: sticky;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin-bottom: 0px
+}
+
+ul {
+  background: gray;
+  height: 20px;
+  padding-bottom: 10px;
+
+}
+
+li {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+li a:hover {
+  background-color: black;
+
+}
+
+.active {
+  background-color: blue;
+}
+
+
+#header h2 {
+  color:white;
+}
+
+#header a {
+      text-decoration: none;
+      color: white
+}
+#header a:visited{
+  color:white;
+}
