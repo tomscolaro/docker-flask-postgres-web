@@ -10,7 +10,7 @@ services:
     env_file:
         - .env
     volumes:
-      - /usr/src/app/web/project/static
+      - /app/project/static
     command: /usr/local/bin/gunicorn -w 2 -b :8000 project:app
     depends_on:
       - postgres
