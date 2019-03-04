@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 import psycopg2
 import os
 
-
+dir_path = os.path.dirname(os.path.realpath(__file__))
 
 app = Flask(__name__)
 
@@ -27,8 +27,8 @@ def index():
 #        article = Article(text)
 #        db.session.add(article)
 #        db.session.commit()
-    posts = Article.query.order_by(Article.date_posted.desc()).all()
-    return render_template('home.html', posts=posts)
+#    posts = Article.query.order_by(Article.date_posted.desc()).all()
+    return render_template('home.html', directory=dir_path)
 
 
 @app.route('/blog')
