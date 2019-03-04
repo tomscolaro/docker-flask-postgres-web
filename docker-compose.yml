@@ -12,15 +12,16 @@ services:
     volumes:
       - /usr/src/app/web/project/static
     command: /usr/local/bin/gunicorn -w 2 -b :8000 project:app
-         
+    depends_on:
+      - postgres
 
   nginx:
     restart: 'always'
     build: ./nginx
     ports:
       - "80:80"
-    volumes:
-      - /www/static
+    volumes_from:
+      - web
     depends_on:
       - web
 
@@ -40,4 +41,3 @@ services:
       - data
     ports:
       - "5432:5432"
-
