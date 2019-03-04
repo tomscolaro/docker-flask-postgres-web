@@ -20,8 +20,6 @@ services:
     build: ./nginx
     ports:
       - "80:80"
-    volumes:
-      - www/static
     volumes_from:
       - web
     depends_on:
