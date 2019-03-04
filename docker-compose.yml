@@ -19,9 +19,9 @@ services:
     restart: 'always'
     build: ./nginx
     ports:
-      - "80:80"a
+      - "80:80"
     volumes:
-      - www/static  
+      - www/static
     volumes_from:
       - web
     depends_on:
